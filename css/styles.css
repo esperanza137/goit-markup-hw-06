@@ -113,7 +113,7 @@ ul {
 .icon-mail {
   fill: var(--secondary-font-color);
   text-decoration: none;
-  align-items: center;
+  /* align-items: center; */
 }
 
 .top-mail-tel {
@@ -122,7 +122,7 @@ ul {
   display: flex;
   font-size: 14px;
   gap: 2rem;
-  align-items: center;
+  /* align-items: center; */
 }
 
 .top-mail-tel-tel,
@@ -131,6 +131,7 @@ ul {
   text-decoration: none;
   color: var(--secondary-font-color);
   gap: 1rem;
+  align-items: center;
 }
 
 .top-mail-tel-tel:hover,
@@ -145,7 +146,7 @@ ul {
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.6)
     ),
-    url("/images/img_tytul.jpg");
+    url("./../images/img_tytul.jpg");
   background-size: cover;
   background-position: center;
   font-family: roboto;
@@ -276,6 +277,8 @@ ul {
   display: flex;
   justify-content: space-evenly;
   list-style: none;
+  margin-inline: 32px;
+  margin-bottom: 30px;
 }
 
 .social-list-link {
@@ -284,7 +287,6 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 18px;
   border-radius: 50%;
 }
 
@@ -298,13 +300,13 @@ ul {
 .social-list-link:hover,
 .social-list-link:focus {
   background-color: var(--selection-color);
-  /* fill: white; */
 }
 
-.social-icon:hover,
-.social-icon:focus {
+a.social-list-link:hover svg,
+a.social-list-link:focus svg {
   fill: white;
 }
+
 .our-team-frame {
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -335,6 +337,12 @@ ul {
   border-color: var(--selection-color);
   cursor: pointer;
 }
+
+.our-clients-icon:hover svg,
+.our-clients-icon:focus svg {
+  fill: var(--selection-color);
+}
+
 .client-icon-link {
   display: flex;
   fill: var(--icon-color);

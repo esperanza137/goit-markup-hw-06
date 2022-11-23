@@ -174,7 +174,7 @@ ul {
   margin-bottom: 30px;
 }
 
-.order {
+.modal-btn {
   font-family: inherit;
   background: var(--selection-color);
   font-size: 16px;
@@ -351,10 +351,10 @@ a.social-list-link:focus svg {
   width: 170px;
   height: 92px;
 }
-.client-icon-link:hover,
+/* .client-icon-link:hover,
 .client-icon-link:focus {
   fill: var(--selection-color);
-}
+} */
 
 .client-icon-svg {
   display: flex;
@@ -519,6 +519,46 @@ img {
 .box:hover .overlay{
   transform: translateX(0);
 }
+
+/* =======BACKDROP============= */
+
+.backdroop{
+  position: fixed;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: blue;
+  }
+
+.modal{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 528px;
+  min-height: 581px;
+  background-color: #ffffff;
+}
+
+.close-btn{
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.is-hidden{
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
   /* 
   .box{
     background-color: orange;

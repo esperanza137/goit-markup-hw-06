@@ -239,12 +239,12 @@ ul {
   letter-spacing: 0.03em;
   line-height: 1.14;
   text-transform: uppercase;
-  text-align: center;
   height: 70px;
   width: 370px;
   padding: 27px 90px;
   background-color: rgba(47, 48, 58, 0.8);
 }
+
 .container-image{
   display: block;
 }
@@ -563,11 +563,12 @@ img {
   top:0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 101%;
   background-color: var(--selection-color);
   
   transform: translateY(100%);
-  transition: trasform 2500ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .overlay > p{

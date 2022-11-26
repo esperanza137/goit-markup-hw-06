@@ -108,6 +108,9 @@ ul {
 .header-navigation:hover,
 .header-navigation:focus {
   color: var(--selection-color);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4,0,0.2,1);
 }
 
 .icon-mail {
@@ -139,6 +142,9 @@ ul {
 .top-mail-tel-mail:focus .top-mail-tel-tel:focus {
   color: var(--selection-color);
   stroke: var(--selection-color);
+  transition-property: color, stroke;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4,0,0.2,1);
 }
 
 .title-background {
@@ -301,11 +307,17 @@ ul {
 .social-list-link:hover,
 .social-list-link:focus {
   background-color: var(--selection-color);
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4,0,0.2,1);
 }
 
 a.social-list-link:hover svg,
 a.social-list-link:focus svg {
   fill: white;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4,0,0.2,1);
 }
 
 .our-team-frame {
@@ -337,11 +349,17 @@ a.social-list-link:focus svg {
 .our-clients-icon:focus {
   border-color: var(--selection-color);
   cursor: pointer;
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4,0,0.2,1);
 }
 
 .our-clients-icon:hover svg,
 .our-clients-icon:focus svg {
   fill: var(--selection-color);
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4,0,0.2,1);
 }
 
 .client-icon-link {
@@ -352,10 +370,6 @@ a.social-list-link:focus svg {
   width: 170px;
   height: 92px;
 }
-/* .client-icon-link:hover,
-.client-icon-link:focus {
-  fill: var(--selection-color);
-} */
 
 .client-icon-svg {
   display: flex;
@@ -392,6 +406,9 @@ a.bottom-mail-tel {
 .bottom-mail-tel:hover,
 .bottom-mail-tel:focus {
   color: var(--selection-color);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4,0,0.2,1);
 }
 
 ul.bottom-mail-tel {
@@ -429,6 +446,9 @@ ul.bottom-mail-tel {
 .social-icons-bg:hover,
 .social-icons-bg:focus {
   background-color: var(--selection-color);
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4,0,0.2,1);
 }
 
 /* ========Portfolio============== */
@@ -462,6 +482,9 @@ ul.bottom-mail-tel {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
+  transition-property: bacground-color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4,0,0.2,1);
 }
 
 ul.portfolio {
@@ -470,10 +493,10 @@ ul.portfolio {
   gap: 30px;
   flex-wrap: wrap;
   margin-bottom: 94px;
-}
+  }
 img {
   display: block;
-}
+ }
 
 .portfolio-item {
   border: 1px solid #eeeeee;
@@ -495,12 +518,17 @@ img {
 .portfolio-cards {
   background: #ffffff;
   flex-basis: calc((100% - 60px) / 3);
+  overflow: hidden;
+  
 }
 .portfolio-cards:hover,
 .portfolio-cards:focus {
-  cursor: pointer;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    cursor: pointer;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+    transition-property: box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4,0,0.2,1);
 }
 /* ============= OVERLAY ================== */
 .box{
@@ -513,13 +541,28 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
+  background-color: var(--selection-color);
+  overflow: hidden;
 
-  transform: translateX(-100%);
+  transform: translateY(100%);
   transition: trasform 250ms ease;
 }
-.box:hover .overlay{
+
+.overlay>p{
+  font: ROboto;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.55;
+  padding: 49px 45px 49px 24px;
+  justify-content: baseline;
+  }
+
+.portfolio-cards:hover .overlay,
+.portfolio-cards:focus .overlay {
   transform: translateX(0);
 }
+
 
 /* =======BACKDROP============= */
 

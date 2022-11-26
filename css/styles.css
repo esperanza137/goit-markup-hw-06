@@ -572,13 +572,12 @@ img {
 }
 
 .overlay > p{
-  font: ROboto;
+  font: "Roboto";
   color: #ffffff;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.55;
   padding: 49px 45px 49px 24px;
-  justify-content: baseline;
   }
 
 .portfolio-cards:hover .overlay,

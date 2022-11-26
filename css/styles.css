@@ -220,6 +220,7 @@ ul {
   letter-spacing: 0.03em;
   color: var(--secondary-font-color);
 }
+/* ======== What do we do? ================== */
 .secondary-title {
   display: flex;
   font-size: 36px;
@@ -228,6 +229,34 @@ ul {
   justify-content: center;
   margin-bottom: 50px;
 }
+
+.container-description{
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  color:white; 
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  line-height: 1.14;
+  text-transform: uppercase;
+  text-align: center;
+  height: 70px;
+  width: 370px;
+  padding: 27px 90px;
+  background-color: rgba(47, 48, 58, 0.8);
+}
+.container-image{
+  display: block;
+}
+
+.container-images {
+  position: relative;
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  margin-bottom: 94px;
+}
+/* ================= Our team ssecion========== */
 .our-team-section h2.secondary-title {
   padding-top: 94px;
 }
@@ -243,12 +272,6 @@ ul {
   margin-bottom: 10px;
 }
 
-.container-images {
-  display: flex;
-  gap: 30px;
-  list-style: none;
-  margin-bottom: 94px;
-}
 
 .our-team-section {
   background-color: var(--third-bacground-color);
@@ -542,13 +565,12 @@ img {
   width: 100%;
   height: 100%;
   background-color: var(--selection-color);
-  overflow: hidden;
-
+  
   transform: translateY(100%);
-  transition: trasform 250ms ease;
+  transition: trasform 2500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.overlay>p{
+.overlay > p{
   font: ROboto;
   color: #ffffff;
   font-weight: 400;
@@ -560,7 +582,7 @@ img {
 
 .portfolio-cards:hover .overlay,
 .portfolio-cards:focus .overlay {
-  transform: translateX(0);
+  transform: translateY(0);
 }
 
 

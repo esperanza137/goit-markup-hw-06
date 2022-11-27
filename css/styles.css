@@ -128,15 +128,18 @@ ul {
   bottom: -32px;
   left: 0;
   visibility: hidden;
-}
+  }
+
+  /* :is (title:has("Webstudio")).agencja:has(.agencja::after){visibility: visible} */
+  
 
 .agencja:hover::after,
 .agencja:focus::after,
 .portfolio:hover::after,
 .portfolio:focus::after{
   visibility: visible;
-  
-}
+  }
+
 .icon-mail {
   fill: var(--secondary-font-color);
   text-decoration: none;
@@ -498,18 +501,34 @@ ul.bottom-mail-tel {
 }
 .newsletter {
   display: flex;
+  color: var(--white-color);
   align-items: baseline;
   margin-left: 78px;
   width: 358px;
   padding: 15px auto 15px 16px;
-  background-color:var(--secondary-bacground-color);
 }
+
+input{
+  background-color:var(--secondary-bacground-color);
+  
+}
+
 .submit-btn{
   background-color: var(--selection-color);
   color: var(--white-color);
   border-color: var(--selection-color);
-  
-}
+  position: relative;
+  padding: 10px 28px 10px 42px;
+  }
+
+  .submit-btn::after{
+    content: "";
+    position: absolute;
+    background-image: url(./../images/icon_send.png);
+    width: 24px;
+    height: 24px;
+    fill: var(--white-color);
+  }
 /* ========Portfolio============== */
 
 .buttons {

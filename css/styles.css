@@ -680,6 +680,29 @@ img {
   transform: scale(1); */
 }
 
+.modal-content>h2{
+  display: block;
+  margin: 40px 40px 12px 40px;
+  justify-content: center;
+}
+
+.modal-content > form{
+  display: flex;
+  direction: column;
+  flex-wrap: wrap;
+  color: var(--font-color);
+  position: absolute;
+  gap: 30px
+}
+
+.modal-content > input{
+  display: block;
+  padding-top: 20px;
+  padding-inline: 15px;
+  display: flex;
+  width: 80%;
+  margin-block: 10px;
+}
 
 .close-btn{
   position: absolute;

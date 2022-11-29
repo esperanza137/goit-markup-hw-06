@@ -66,18 +66,21 @@
           <div class="backdrop is-hidden" data-modal>
             <div class="modal">
               <div class="modal-content">
-<form>
-  <fieldset>
-    Zostaw swoje dane w formularzu poniżej
-    <label> Imię
-    <input type="text"
-
-    </label>
-
-
-  </fieldset>
-</form>
-                  
+              <form>
+              <h2>Zostaw swoje dane w formularzu poniżej</h2>
+              <label> Imie
+              <input type="text" name="name" required minlength="2">
+              </label>
+              <label> Telefon
+              <input type="tel" name="tel" required pattern="[0-9][3]-[0-9][3]-[0-9][3]" >
+              </label>
+              <label>Email
+                <input type="email" name="email" required>
+              </label>
+              <label>Komentarz
+                <textarea name="comment" rows="5" placeholder="Wprowadź tekst"></textarea>
+              </label>
+              </form>
               </div>
               <button type="button" class="close-btn" data-modal-close>X</button>
             </div>

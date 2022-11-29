@@ -63,6 +63,25 @@
         <div class="container">
           <h1 class="main-title">EFEKTYWNE ROZWIĄZANIA DLA WASZEGO BIZNESU</h1>
           <button class="modal-btn" type="button" data-modal-open>Zamów usługe</button>
+          <div class="backdrop is-hidden" data-modal>
+            <div class="modal">
+              <div class="modal-content">
+<form>
+  <fieldset>
+    Zostaw swoje dane w formularzu poniżej
+    <label> Imię
+    <input type="text"
+
+    </label>
+
+
+  </fieldset>
+</form>
+                  
+              </div>
+              <button type="button" class="close-btn" data-modal-close>X</button>
+            </div>
+          </div>
         </div>
       </section>
       <section>
@@ -410,7 +429,7 @@
             <form name="signup__form" autocomplete="on" validate>
               <label>
                 <h3>ZAPISZ SIĘ DO NEWSLETTERA</h3>
-                <input type="email" name="email" placeholder="E-mail"/>
+                <input class="input-email" type="email" name="email" placeholder="E-mail"/>
               </label>
               <button class="submit-btn" type="submit">Zapisz się</button>
               </button>
@@ -420,12 +439,7 @@
       </div>
     </footer>
     
-    <div class="backdrop is-hidden" data-modal>
-      <div class="modal">
-        <button type="button" class="close-btn" data-modal-close>X</button>
-      </div>
-    </div>
-    
+   
     <script src="./js/modal.js"></script>
   
   </body>

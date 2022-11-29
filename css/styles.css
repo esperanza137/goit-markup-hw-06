@@ -210,6 +210,7 @@ ul {
   align-items: center;
   justify-content: center;
   border-radius: 4px;
+  border: none;
   padding: 10px 41px;
   cursor: pointer;
 }
@@ -336,7 +337,7 @@ ul {
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  transition-property:fill, background-color;
+  transition-property: fill, background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4,0,0.2,1);
 }
@@ -484,34 +485,49 @@ ul.bottom-mail-tel {
 .social-icons-bg:focus {
   background-color: var(--selection-color);
 }
+
 .newsletter {
   display: flex;
   color: var(--white-color);
   align-items: baseline;
   margin-left: 78px;
-  width: 358px;
-  padding: 15px auto 15px 16px;
+}
+.newsletter> h3{
+font-size: 14px;
 }
 
-input{
+.input-email{
+  margin-top: 20px;
   background-color:var(--secondary-bacground-color);
-  
+  width: 358px;
+  font-size: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  padding-block: 15px;
+  padding-left: 16px;
+
 }
 
 .submit-btn{
   background-color: var(--selection-color);
   color: var(--white-color);
+  font-size: 16px;
+
   border-color: var(--selection-color);
+  border: 1px solid var(--selection-color);
+  border-radius: 4px;
   position: relative;
-  padding: 10px 28px 10px 42px;
+  width: 200px;
+  padding: 10px 24px 10px 42px;
   }
 
   .submit-btn::after{
     content: "";
     position: absolute;
-    background-image: url(./../images/icon_send.png);
+    background-image: url("./images/icon_send.jpg");
     width: 24px;
     height: 24px;
+    stroke: var(--white-color);
     fill: var(--white-color);
   }
 /* ========Portfolio============== */
@@ -614,7 +630,7 @@ img {
 
 .overlay > p{
   font-family: "Roboto", sans-serif;
-  color: #ffffff;
+  color: var(--white-color);
   font-weight: 400;
   font-size: 18px;
   line-height: 1.55;
@@ -649,12 +665,13 @@ img {
 
 .modal{
   position: absolute;
+  background-color: var(--white-color);
+  width: 528px;
+  min-height: 581px;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
-  width: 528px;
-  min-height: 581px;
-  background-color: #ffffff;
+  display: flex;
 
   /* animation-name: modalBox;
   transition-property: transform;
@@ -670,7 +687,7 @@ img {
   right: 8px;
   width: 30px;
   height: 30px;
-  background-color: #ffffff;
+  background-color: var(--white-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   cursor: pointer;
@@ -681,6 +698,7 @@ img {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+  transform: scale(0);
 }
 
 

@@ -64,30 +64,56 @@
           <h1 class="main-title">EFEKTYWNE ROZWIĄZANIA DLA WASZEGO BIZNESU</h1>
           <button class="modal-btn" type="button" data-modal-open>Zamów usługe</button>
           <div class="backdrop is-hidden" data-modal>
+            <button type="button" class="close-btn" data-modal-close>
+              <svg class="close-btn-icon" width="18" height="18">
+                <use href="./images/icons.svg#icon-close-black"></use>
+              </svg>
             <div class="modal">
-              <button type="button" class="close-btn" data-modal-close>
-                <svg class="close-btn-icon" width="18" height="18">
-                  <use href="./images/icons.svg#icon-close-black"></use>
-                </svg>
               <div class="modal-content">
-              <form>
-              <h2>Zostaw swoje dane w formularzu poniżej</h2>
-              <label> Imie
-              <input type="text" name="name" required minlength="2">
-              </label>
-              <label> Telefon
-              <input type="tel" name="tel" required pattern="[0-9][3]-[0-9][3]-[0-9][3]" >
-              </label>
-              <label>Email
-                <input type="email" name="email" required>
-              </label>
-              <label>Komentarz
-                <textarea name="comment" rows="5" placeholder="Wprowadź tekst"></textarea>
-              </label>
-              </form>
+                <form>
+                  <h3 class="modal-title">Zostaw swoje dane w formularzu poniżej</h3>
+                  <fieldset class="fieldset">
+                  <label class="modal-content-label"> Imie
+                  <svg class="modal-icon" width="18" height="18">
+                    <use href="./images/icons.svg#icon-person-black">
+                    </use>
+                  </svg>
+                    <input type="text" name="name" required minlength="2">
+                  </label>
+                </fieldset>
+                <fieldset class="fieldset">
+                  <label class="modal-content-label"> Telefon
+                    <svg class="modal-icon" width="18" height="18">
+                      <use href="./images/icons.svg#icon-phone-black">
+                      </use>
+                    </svg>
+                    <input type="tel" name="tel" required pattern="[0-9][3]-[0-9][3]-[0-9][3]" >
+                  </label>
+                </fieldset>
+                <fieldset class="fieldset">
+                  <label class="modal-content-label">Email
+                    <svg class="modal-icon" width="18" height="18">
+                      <use href="./images/icons.svg#icon-email-black">
+                      </use>
+                    </svg>
+                    <input type="email" name="email" required>
+                  </label>
+                </fieldset>
+                <fieldset class="fieldset">
+                  <label class="modal-content-label">Komentarz
+                    <textarea name="comment" rows="5" placeholder="Wprowadź tekst"></textarea>
+                  </label>
+                </fieldset>
+                <label class="checked-label">
+                  <input type="checkbox" class="checked-box" value="legal">Ośiwadczam, iż akceptuję <a href="#">Regulamin</a> i <a href="#">Politykę prywatności.</a>
+                  <span>
+                    <svg><use></use></svg>
+                    </span>
+                </label>
+                <button type="submit" class="comment-btn">Wyślij</button>
+                </form>
               </div>
-              <button type="button" class="close-btn" data-modal-close>X</button>
-            </div>
+             </div>
           </div>
         </div>
       </section>

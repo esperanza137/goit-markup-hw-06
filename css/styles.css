@@ -656,11 +656,13 @@ img {
 
 .backdroop{
   position: fixed;
+  display: flex;
   left: 0;
   right: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 1);
+  transition: transform .25s;
   }
 
 .modal{
@@ -671,13 +673,13 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
-  /* display: flex; */
+  display: flex;
 
-  /* animation-name: modalBox;
+  animation-name: modalBox;
   transition-property: transform;
   transition-duration: 500ms;
   transition-timing-function: cubic-bezier(0.4,0,0.2,1);
-  transform: scale(1); */
+  transform: scale(1);
 }
 
 .modal-content {
@@ -687,7 +689,7 @@ img {
 }
 
 .modal-content {
-  display: flex;
+  /* display: flex; */
   direction: column;
   flex-wrap: wrap;
   color: var(--font-color);
@@ -696,32 +698,32 @@ img {
 }
 
 .modal-content > input{
-  display: block;
+  /* display: block; */
   padding-top: 20px;
   padding-inline: 15px;
   display: flex;
   width: 80%;
   margin-block: 10px;}
 
-  .modal-content-label {
-    position: absolute;
-    top: -20px;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 1.16;
-    letter-spacing: 0.01em;
-    color: var(--secondary-font-color);
-  }
+.modal-content-label {
+  position: absolute;
+  top: -20px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: var(--secondary-font-color);
+ }
   
-  .modal-form .comment{
-    border: 0;
-    background-color: transparent;
-    width: 100%;
-    padding-inline: 16px;
-    padding-top: 12px;
-    resize: none;
-    position: relative;
-  }
+.modal-form .comment{
+  border: 0;
+  background-color: transparent;
+  width: 100%;
+  padding-inline: 16px;
+  padding-top: 12px;
+  resize: none;
+  position: relative;
+ }
 
 .close-btn{
   position: absolute;
@@ -742,7 +744,6 @@ img {
   pointer-events: none;
   transform: scale(0);
 }
-
 
   /* 
   .box{

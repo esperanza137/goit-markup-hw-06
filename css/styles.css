@@ -492,16 +492,30 @@ ul.bottom-mail-tel {
   align-items: baseline;
   margin-left: 78px;
 }
-.newsletter> h3{
+
+.signup__title{
 font-size: 14px;
+line-height: 1.14px;
+letter-spacing: 0.03em;
+text-transform: uppercase;
+}
+
+.icon-forms{
+position: absolute;
+top: 13px;
+right: 28px;
+fill: var(--white-color);
 }
 
 .input-email{
   margin-top: 20px;
   background-color:var(--secondary-bacground-color);
   width: 358px;
+  height: 50px;
   font-size: 16px;
+
   border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   padding-block: 15px;
   padding-left: 16px;
@@ -509,19 +523,28 @@ font-size: 14px;
 }
 
 .submit-btn{
-  background-color: var(--selection-color);
-  color: var(--white-color);
-  font-size: 16px;
+ position: relative;
+ padding: 10px 62px 10px 42px;
+ 
+ color: var(--white-color);
+ font-size: 16px;
+ font-weight: 700;
+ line-height: 1.87; 
+ letter-spacing: 0.06em;
+ 
+ background-color: var(--selection-color);
+ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  width: 200px;
 
   border-color: var(--selection-color);
   border: 1px solid var(--selection-color);
-  border-radius: 4px;
-  position: relative;
-  width: 200px;
-  padding: 10px 24px 10px 42px;
-  }
 
-  .submit-btn::after{
+  transition: color 0.25s cubic-bezier(0.4,0,0.2,1),
+  background-color 0.25s cubic-bezier(0.4,0,0.2,1);
+}
+
+  /* .submit-btn::after{
     content: "";
     position: absolute;
     background-image: url("./images/icon_send.jpg");
@@ -529,7 +552,8 @@ font-size: 14px;
     height: 24px;
     stroke: var(--white-color);
     fill: var(--white-color);
-  }
+  }/*
+
 /* ========Portfolio============== */
 
 .buttons {
@@ -656,56 +680,65 @@ img {
 
 .backdroop{
   position: fixed;
-  display: flex;
   left: 0;
   right: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 1);
-  transition: transform .25s;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity .25s cubic-bezier(0.4,0,0.2,1);
   }
 
 .modal{
   position: absolute;
-  background-color: var(--white-color);
-  width: 528px;
-  min-height: 581px;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
-  display: flex;
-
+ 
+  width: 528px;
+  min-height: 581px;
+  border-radius: 4px;
+  padding: 40px;
+ 
+  background-color: var(--white-color);
+  transform: translate(-50%,-50%) scale(1);
+  
   animation-name: modalBox;
   transition-property: transform;
-  transition-duration: 500ms;
+  transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4,0,0.2,1);
-  transform: scale(1);
+  }
+
+.modal-title{
+display: block;
+margin-bottom:12px;
+
+font-size: 20px;
+line-height: 1.15;
+letter-spacing: 0.03em;
+text-align: center;
 }
 
-.modal-content {
+/* .modal-content {
   margin: 40px 40px 12px 40px;
   justify-content: center;
   font-size: 20px;
-}
+} */
 
-.modal-content {
-  /* display: flex; */
+/* .modal-content {
   direction: column;
   flex-wrap: wrap;
   color: var(--font-color);
   position: absolute;
   gap: 30px
-}
+} */
 
-.modal-content > input{
-  /* display: block; */
+.modal-label-title{
+  display: block;
   padding-top: 20px;
   padding-inline: 15px;
-  display: flex;
   width: 80%;
   margin-block: 10px;}
 
-.modal-content-label {
+/* .modal-content-label {
   position: absolute;
   top: -20px;
   font-weight: 400;
@@ -713,7 +746,7 @@ img {
   line-height: 1.16;
   letter-spacing: 0.01em;
   color: var(--secondary-font-color);
- }
+ } */
   
 .modal-form .comment{
   border: 0;
@@ -725,12 +758,26 @@ img {
   position: relative;
  }
 
-.close-btn{
+ .modal-icon{
+  transition: fill 0.25s cubic-bezier(0.4,0,0.2,1);
+ }
+
+.modal-icon .modal{
+  transform: translate(-150%, -50%);
+  transition: transform 0.25s cubic-bezier(0.4,0,0.2,1);
+}
+
+ .close-btn{
   position: absolute;
   top: 8px;
   right: 8px;
   width: 30px;
   height: 30px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   background-color: var(--white-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
@@ -738,7 +785,12 @@ img {
   /* transform:  */
 }
 
-.is-hidden{
+.close-btn:hover,
+.close-btn:focus{
+  fill: var(--selection-color);
+}
+
+.backdroop.is-hidden{
   opacity: 0;
   visibility: hidden;
   pointer-events: none;

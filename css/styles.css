@@ -698,7 +698,7 @@ img {
   border-radius: 4px;
   padding: 40px;
  
-  background-color: var(--icon-color );
+  background-color: var(--white-color);
   transform: translate(-50%,-50%) scale(1);
   
   animation-name: modalBox;
@@ -708,50 +708,57 @@ img {
   }
 
 .modal-title{
-display: block;
-margin-bottom:12px;
+  display: block;
+  margin-bottom:12px;
 
-font-size: 20px;
-line-height: 1.15;
-letter-spacing: 0.03em;
-text-align: center;
+  font-size: 20px;
+  line-height: 1.15;
+  letter-spacing: 0.03em;
+  text-align: center;
 }
-
-/* .modal-content {
-  direction: column;
-  flex-wrap: wrap;
-  color: var(--font-color);
-  position: absolute;
-  gap: 30px
-} */
 
 .modal-label-title{
   display: block;
-  padding-top: 20px;
-  padding-inline: 15px;
-  width: 80%;
-  margin-block: 10px;}
-
-.modal-content-label {
-  top: -20px;
+  padding-top: 12px;
   font-weight: 400;
   font-size: 12px;
-  line-height: 1.16;
+  line-height: 1.66px;
   letter-spacing: 0.01em;
-  color: var(--secondary-font-color);
- }
+
+  margin-top: 4px;
+  margin-bottom: 10px;
+}
+
+.newsletter-inputs{
+  position: relative;
+  width: 448px;
+  height: 40px;
+  margin-inline: 0 40px;
+
+  padding-block: 11px;
+  padding-inline: 12px;
+  border-radius: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+}
   
-.modal-form .comment{
-  border: 0;
-  background-color: transparent;
+ .newsletter-textarea{
+  display: block;
+  position: relative;
   width: 100%;
+  width: 448px;
   padding-inline: 16px;
   padding-top: 12px;
+  color: rgba(117, 117, 117, 0.5);
+  
+  border-radius: 4px;
+  border: 1px solid var(--secondary-font-color);
   resize: none;
-  position: relative;
  }
 
  .modal-icon{
+  position: absolute;
+  top: 10px;
+  left: 45px;
   transition: fill 0.25s cubic-bezier(0.4,0,0.2,1);
  }
 
@@ -781,6 +788,25 @@ text-align: center;
 .close-btn:hover,
 .close-btn:focus{
   fill: var(--selection-color);
+}
+
+.comment-btn{
+background-color: var(--selection-color);
+width: 200px;
+padding: 10px 76px;
+color: var(--white-color);
+font-size: 16px;
+font-weight: 700;
+line-height: 1.87;
+
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: 0.06em;
+
+border-radius: 4px;
+border: var(--selection-color);
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .backdroop.is-hidden{

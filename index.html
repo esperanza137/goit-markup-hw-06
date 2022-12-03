@@ -502,9 +502,9 @@
             </ul>
           </div>
           <div class="newsletter">
-            <form name="signup__form" autocomplete="on" validate>
+            <form name="signup__form" autocomplete="on">
               <label>
-                <h2 class="signup__title">ZAPISZ SIĘ DO NEWSLETTERA</h2>
+                <span class="signup__title">ZAPISZ SIĘ DO NEWSLETTERA</span>
                 <input
                   class="input-email"
                   type="email"
@@ -527,21 +527,23 @@
     <!-- ==== modal ============ -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-      
         <div class="modal-content">
           <button class="close-btn" type="button" data-modal-close>
             <svg class="close-btn-icon" width="18" height="18">
               <use href="./images/icons.svg#icon-close-black"></use>
             </svg>
           </button>
-      
+
           <strong class="modal-title"
             >Zostaw swoje dane w formularzu poniżej</strong
           >
-      
+
           <form name="modal-group">
-            <label class="modal-content-label">
+            <label>
               <span class="modal-label-title">Imię</span>
+              <svg class="modal-icon" width="18" height="18">
+                <use href="./images/icons.svg#icon-person-black"></use>
+              </svg>
               <input
                 class="modal-inputs"
                 type="text"
@@ -549,28 +551,15 @@
                 id="username"
                 required
                 minlength="2"
-                />
-                <svg class="modal-icon" width="18" height="18">
-                  <use href="./images/icons.svg#icon-person-black"></use>
-                </svg>
-            </label>
-            <label class="modal-content-label">
-              <span class="modal-label-title">Telefon</span>
-              <input
-                class="modal-inputs"
-                type="tel"
-                name="tel"
-                id="telephone"
-                required
-                pattern="[0-9][3]-[0-9][3]-[0-9][3]"
               />
+            </label>
+            <label>
+              <span class="modal-label-title">Telefon</span>
               <svg class="modal-icon" width="18" height="18">
                 <use href="./images/icons.svg#icon-phone-black"></use>
               </svg>
             </label>
-            <label class="modal-content-label">
-              <span class="modal-label-title">Email</span>
-              <input
+            <input
               class="modal-inputs"
               type="tel"
               name="tel"
@@ -578,12 +567,21 @@
               required
               pattern="[0-9][3]-[0-9][3]-[0-9][3]"
             />
+            <label>
+              <span class="modal-label-title">Email</span>
               <svg class="modal-icon" width="18" height="18">
                 <use href="./images/icons.svg#icon-email-black"></use>
               </svg>
+              <input
+                class="modal-inputs"
+                type="email"
+                name="email"
+                id="email"
+                required
+               />
             </label>
-            <label class="modal-content-label">
-              <span class="modal-label-title">Komentarz</span>
+            <label>
+            <span class="modal-label-title">Komentarz</span>
               <textarea
                 class="modal-textarea"
                 name="comment"

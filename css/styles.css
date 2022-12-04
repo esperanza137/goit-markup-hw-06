@@ -522,7 +522,7 @@ ul.bottom-mail-tel {
 
 .submit-btn {
   position: relative;
-  padding: 10px 62px 10px 42px;
+  padding: 10px 62px 10px 29px;
 
   color: var(--white-color);
   font-size: 16px;
@@ -681,7 +681,7 @@ img {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
-  /* transition: opacity .25s cubic-bezier(0.4,0,0.2,1); */
+  transition: opacity .25s cubic-bezier(0.4,0,0.2,1);
 }
 
 .modal {
@@ -695,14 +695,14 @@ img {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   padding: 40px;
-
+  z-index: 1;
   background-color: var(--white-color);
-  transform: scale(1) translate(-50%, -50%);
-
+  
   animation-name: modalBox;
   transition-property: transform;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translate(-50%, -50%) scale(1) ;
 }
 
 .modal-title {
@@ -713,6 +713,19 @@ img {
   line-height: 1.15;
   letter-spacing: 0.03em;
   text-align: center;
+}
+
+.modal-label{
+  position: relative;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.modal-label:focus-within, .modal-icon svg,
+.modal-label:hover svg{
+  fill: var(--selection-color);
+  stroke: var(--selection-color);
+  border-color: var(--selection-color);
 }
 
 .modal-label-title {
@@ -730,7 +743,8 @@ img {
 
 .modal-icon {
   position: absolute;
-  top: 20px;
+  top: 35px;
+  left: 12px;
   cursor: text;
   transition: fill 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 3;
@@ -744,16 +758,19 @@ img {
   width: 448px;
   height: 40px;
   margin-inline: 0 40px;
+  padding: 12px 45px;
 
   position: relative;
-  padding: 11px 12px;
+  /* padding: 11px 12px; */
   border-radius: 4px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   cursor: text;
 }
 
 .modal-inputs:focus svg,
-.modal-inputs:hover svg {
+.modal-inputs:hover svg,
+.modal-inputs:focus,
+.modal-inputs:hover {
   border-color: var(--selection-color);
   fill: var(--selection-color);
 }
@@ -791,6 +808,11 @@ img {
   margin-bottom: 30px;
 }
 
+.checkbox-input{
+  display: block;
+  appearance: none;
+}
+
 .close-btn {
   position: absolute;
   top: 8px;
@@ -807,6 +829,34 @@ img {
   cursor: pointer;
   /* transform:  */
 }
+
+.icon-check-on {
+  display: block;
+  opacity: 0;
+  position: absolute;
+}
+
+.checkbox-settings{
+  display: flex;
+  align-items: center;
+}
+
+.checbox-title{
+  /* margin-left: 7px; */
+  display: block;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+
+.checkbox-input:checked+ .checkbox-settings .icon-check-on{
+  opacity: 1;
+}
+
+.checkbox-settings:checked+.icon-check-off{
+  opacity: 0;
+}
+
 
 .submit-nwsltr-btn {
   background-color: var(--selection-color);
@@ -825,13 +875,14 @@ img {
   border-radius: 4px;
   border: var(--selection-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
 }
 
 .is-hidden {
   pointer-events: none;
 }
 
-.backdroop.is-hidden {
+.backdroop .is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;

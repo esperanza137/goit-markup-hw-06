@@ -799,7 +799,7 @@ img {
 }
 
 .checkbox-group {
-  display: block;
+  display: flex;
   margin-top: 20px;
   font-size: 14px;
   font-weight: 400;
@@ -830,20 +830,22 @@ img {
   /* transform:  */
 }
 
-.icon-check-on {
-  display: block;
-  opacity: 0;
-  position: absolute;
-}
 
 .checkbox-settings{
   display: flex;
   align-items: center;
 }
 
-.checbox-title{
-  /* margin-left: 7px; */
+.icon-check-on {
   display: block;
+  opacity: 0;
+  position: absolute;
+}
+
+.checbox-title{
+  margin-left: 7px;
+  display: flex;
+  font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
@@ -853,10 +855,18 @@ img {
   opacity: 1;
 }
 
-.checkbox-settings:checked+.icon-check-off{
+.checkbox-input:checked+ .checkbox-settings .icon-check-off{
   opacity: 0;
 }
 
+/* .checkbox-settings:checked+.icon-check-off{
+  opacity: 0;
+} */
+
+.checkbox-link{
+  color: var(--selection-color);
+  text-decoration: underline;
+}
 
 .submit-nwsltr-btn {
   background-color: var(--selection-color);
@@ -880,15 +890,12 @@ img {
 
 .is-hidden {
   pointer-events: none;
-}
-
-.backdroop .is-hidden {
   opacity: 0;
   visibility: hidden;
-  pointer-events: none;
 }
 
 .modal .is-hidden {
+  
   transform: scale(0);
   transition: transform 0.2s;
   transition-timing-function: ease-out;

@@ -513,8 +513,6 @@ ul.bottom-mail-tel {
   background-color: var(--selection-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-  /* width: 200px; */
-
   border-color: var(--selection-color);
   border: 1px solid var(--selection-color);
 
@@ -833,7 +831,6 @@ img {
   /* transform:  */
 }
 
-
 .checkbox-settings{
   display: flex;
   align-items: center;
@@ -871,7 +868,7 @@ img {
   text-decoration: underline;
 }
 
-.submit-nwsltr-btn {
+.submit-nmodal-btn {
   background-color: var(--selection-color);
   width: 200px;
   padding: 10px 76px;

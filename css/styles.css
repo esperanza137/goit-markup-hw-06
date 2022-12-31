@@ -502,7 +502,7 @@ ul.bottom-mail-tel {
 
 .submit-btn {
   position: relative;
-  padding: 10px 62px 10px 29px;
+  padding: 8px 72px 8px 42px;
 
   color: var(--white-color);
   font-size: 16px;
@@ -513,7 +513,7 @@ ul.bottom-mail-tel {
   background-color: var(--selection-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-  width: 200px;
+  /* width: 200px; */
 
   border-color: var(--selection-color);
   border: 1px solid var(--selection-color);
@@ -531,8 +531,9 @@ ul.bottom-mail-tel {
 
 .input-email {
   margin-top: 20px;
+  margin-right: 11px;
   background-color: var(--secondary-bacground-color);
-  width: 358px;
+  width: 356px;
   height: 50px;
   font-size: 16px;
   color: rgba(255, 255, 255, 0.6);
@@ -543,6 +544,7 @@ ul.bottom-mail-tel {
   padding-block: 15px;
   padding-left: 16px;
 }
+
 /* .submit-btn::after{
     content: "";
     position: absolute;

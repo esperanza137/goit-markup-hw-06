@@ -493,31 +493,11 @@ ul.bottom-mail-tel {
 }
 
 .signup__title {
+  font-weight: 700;
   font-size: 14px;
   line-height: 1.14px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-}
-
-.icon-forms {
-  position: absolute;
-  top: 13px;
-  right: 28px;
-  fill: var(--white-color);
-}
-
-.input-email {
-  margin-top: 20px;
-  background-color: var(--secondary-bacground-color);
-  width: 358px;
-  height: 50px;
-  font-size: 16px;
-
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  padding-block: 15px;
-  padding-left: 16px;
 }
 
 .submit-btn {
@@ -540,8 +520,29 @@ ul.bottom-mail-tel {
 
   transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
     background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+}
+.icon-forms {
+  position: absolute;
+  top: 13px;
+  right: 28px;
+  fill: var(--white-color);
 }
 
+.input-email {
+  margin-top: 20px;
+  background-color: var(--secondary-bacground-color);
+  width: 358px;
+  height: 50px;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.6);
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  padding-block: 15px;
+  padding-left: 16px;
+}
 /* .submit-btn::after{
     content: "";
     position: absolute;

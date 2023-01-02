@@ -890,7 +890,7 @@ img {
   text-decoration: underline;
 }
 
-.submit-nmodal-btn {
+.submit-modal-btn {
   background-color: var(--selection-color);
   width: 200px;
   padding: 10px 76px;

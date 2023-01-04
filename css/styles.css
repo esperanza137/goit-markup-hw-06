@@ -677,7 +677,7 @@ img {
 
 .backdrop {
   position: fixed;
-  display: flex;
+  display: flexbox;
   left: 0;
   right: 0;
   width: 100%;
@@ -691,10 +691,10 @@ img {
   transform: translateX(-100%);
   /* pointer-events: none;
   opacity: 0;
-  visibility: hidden; */
-} */
+  visibility: hidden; 
+} 
 
-/* .modal .is-hidden {
+ .modal .is-hidden {
   transform: scale(0);
   transition: transform 0.2s;
   transition-timing-function: ease-out;

@@ -678,15 +678,16 @@ img {
 .backdrop {
   position: fixed;
   display: flex;
-  left: 0;
+  /* left: 0;
   right: 0;
   top: 0;
-  bottom: 0;
+  bottom: 0; */
+  inset: 0;
   width: 100%;
   height: 100%;
   z-index: 2;
   background: rgba(0 0 0 / 0.5);
-  /* transition: transform .25s cubic-bezier(0.4,0,0.2,1); */
+  transition: transform .25s cubic-bezier(0.4,0,0.2,1);
 }
 
 .is-hidden {
@@ -703,8 +704,7 @@ img {
 } */
 
 .modal {
-  top: 50%;
-  left: 50%;
+  position: relative;
 
   width: 528px;
   min-height: 581px;
@@ -773,6 +773,7 @@ img {
  transform: translate(-150%, -50%);
  transition: transform 0.25s cubic-bezier(0.4,0,0.2,1);
 } */
+
 .modal-inputs {
   width: 448px;
   height: 40px;
@@ -780,7 +781,6 @@ img {
   padding: 12px 45px;
 
   position: relative;
-  /* padding: 11px 12px; */
   border-radius: 4px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   cursor: text;
@@ -839,6 +839,7 @@ img {
 
 .close-btn {
   position: absolute;
+  display: flex;
   top: 8px;
   right: 8px;
   width: 30px;

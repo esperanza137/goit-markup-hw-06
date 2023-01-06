@@ -518,7 +518,7 @@ ul.bottom-mail-tel {
 
   transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
     background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-    cursor: pointer;
+  cursor: pointer;
 }
 .icon-forms {
   position: absolute;
@@ -687,17 +687,17 @@ img {
   height: 100%;
   z-index: 2;
   background: rgba(0 0 0 / 0.5);
-  transition: transform .25s cubic-bezier(0.4,0,0.2,1);
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .is-hidden {
   /* transform: translateX(-100%); */
   pointer-events: none;
   opacity: 0;
-  visibility: hidden; 
-} 
+  visibility: hidden;
+}
 
- /* .modal .is-hidden {
+/* .modal .is-hidden {
   transform: scale(0);
   transition: transform 0.2s;
   transition-timing-function: ease-out;
@@ -715,7 +715,7 @@ img {
   padding: 40px;
   z-index: 10;
   background-color: var(--white-color);
-  
+
   animation-name: modalBox;
   transition-property: transform;
   transition-duration: 250ms;
@@ -733,7 +733,7 @@ img {
   text-align: center;
 }
 
-.modal-label{
+.modal-label {
   position: relative;
   display: block;
   margin-bottom: 10px;
@@ -741,7 +741,7 @@ img {
 
 .modal-label:focus-within,
 .modal-icon svg,
-.modal-label:hover svg{
+.modal-label:hover svg {
   fill: var(--selection-color);
   stroke: var(--selection-color);
   border-color: var(--selection-color);
@@ -819,7 +819,7 @@ img {
   border: 1px solid rgba(33, 33, 33, 0.2);
   resize: none;
 }
-.modal-textarea::placeholder{
+.modal-textarea::placeholder {
   color: rgba(117, 117, 117, 0.5);
 }
 .checkbox-group {
@@ -832,7 +832,7 @@ img {
   margin-bottom: 30px;
 }
 
-.checkbox-input{
+.checkbox-input {
   display: block;
   appearance: none;
 }
@@ -854,7 +854,7 @@ img {
   cursor: pointer;
 }
 
-.checkbox-settings{
+.checkbox-settings {
   display: flex;
   align-items: center;
 }
@@ -865,7 +865,7 @@ img {
   position: absolute;
 }
 
-.checbox-title{
+.checbox-title {
   margin-left: 7px;
   display: flex;
   font-weight: 400;
@@ -874,11 +874,11 @@ img {
   letter-spacing: 0.03em;
 }
 
-.checkbox-input:checked+ .checkbox-settings .icon-check-on{
+.checkbox-input:checked + .checkbox-settings .icon-check-on {
   opacity: 1;
 }
 
-.checkbox-input:checked+ .checkbox-settings .icon-check-off{
+.checkbox-input:checked + .checkbox-settings .icon-check-off {
   opacity: 0;
 }
 
@@ -886,7 +886,7 @@ img {
   opacity: 0;
 } */
 
-.checkbox-link{
+.checkbox-link {
   color: var(--selection-color);
   text-decoration: underline;
 }

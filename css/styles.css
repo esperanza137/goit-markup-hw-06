@@ -513,13 +513,20 @@ ul.bottom-mail-tel {
   background-color: var(--selection-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-  border-color: var(--selection-color);
   border: 1px solid var(--selection-color);
-
-  transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
+  transition-property: background-color, border-color, tranform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0;
 }
+
+.submit-btn:focus,
+.submit-btn:hover {
+  background-color: darkblue; 
+  border-color: darkblue;
+  transform: scale(1.10);
+  } 
 .icon-forms {
   position: absolute;
   top: 13px;
@@ -666,14 +673,14 @@ img {
 
 /* =======BACKDROP============= */
 
-/* @keyframes modalBox{
+@keyframes modalBox{
 0%{
-  transform: scale(0.5);
+  transform: scale(0.3);
 }
 100%{
   transform: scale(1);
 }
-} */
+}
 
 .backdrop {
   position: fixed;
@@ -687,7 +694,6 @@ img {
   height: 100%;
   z-index: 2;
   background: rgba(0 0 0 / 0.5);
-  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .is-hidden {
@@ -705,22 +711,22 @@ img {
 
 .modal {
   position: relative;
-
+  
   width: 528px;
   min-height: 581px;
   margin: auto;
   border-radius: 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
+  0px 2px 1px rgba(0, 0, 0, 0.2);
   padding: 40px;
   z-index: 10;
   background-color: var(--white-color);
-
+  
   animation-name: modalBox;
-  transition-property: transform;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  /* transform: translate(-50%, -50%) scale(1); */
+  animation-duration: 250ms;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  animation-delay: 0;
+  /* animation: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1); */
 }
 
 .modal-title {
@@ -769,11 +775,6 @@ img {
   z-index: 3;
 }
 
-/* .modal-icon .modal{
- transform: translate(-150%, -50%);
- transition: transform 0.25s cubic-bezier(0.4,0,0.2,1);
-} */
-
 .modal-inputs {
   width: 448px;
   height: 40px;
@@ -796,10 +797,6 @@ img {
   fill: var(--selection-color);
   outline: none;
 }
-/* .modal-inputs:focus-within svg {
-  border-color: var(--selection-color);
-  fill: var(--selection-color);
-} */
 
 .modal-textarea {
   display: block;
@@ -908,22 +905,17 @@ img {
   border: var(--selection-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   cursor: pointer;
-}
 
-/* 
-  .box{
-    background-color: orange;
-    transition-property: background-color, transform;
-  transition-duration: 500ms;
-  transition-timing-function: linear; [ease-in, ease-out, ease-in-out]
+  transition-property: background-color, border-color, tranform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-delay: 0;
-  
-transition: [property] [duration] [timing-function] [delay]
-transition: background-color 500ms linear, transform 500ms ease-in-out;
-transition: background-color 500ms linear, transform 500ms ease-in-out 500ms;  
-
-.box:hover {
-  background-color: teal;
-  transform: rotate(180deg);
 }
-  */
+
+.submit-modal-btn:focus,
+.submit-modal-btn:hover{
+  background-color: darkblue; 
+  border-color: darkblue;
+  transform: scale(1.10);
+}
+

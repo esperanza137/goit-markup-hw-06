@@ -694,11 +694,14 @@ img {
   visibility: hidden;
 }
 
-.modal .is-hidden {
+/* .modal .is-hidden {
   transform: scale(0);
   transition: transform 0.2s;
   transition-timing-function: ease-out;
-}
+} */
+
+/* .backdrop.is-hidden .modal {
+  transform: translate(-50%, -150%) scale(1.5) rotate(4turn); */
 
 /* @keyframes fade-in{
 0%{
@@ -741,7 +744,7 @@ opacity: 1;
 
 .modal {
   position: relative;
-  
+
   width: 528px;
   min-height: 581px;
   margin: auto;

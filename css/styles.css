@@ -673,15 +673,6 @@ img {
 
 /* =======BACKDROP============= */
 
-@keyframes modalBox{
-0%{
-  transform: scale(0.3);
-}
-100%{
-  transform: scale(1);
-}
-}
-
 .backdrop {
   position: fixed;
   display: flex;
@@ -703,11 +694,50 @@ img {
   visibility: hidden;
 }
 
-/* .modal .is-hidden {
+.modal .is-hidden {
   transform: scale(0);
   transition: transform 0.2s;
   transition-timing-function: ease-out;
+}
+
+/* @keyframes fade-in{
+0%{
+  opacity: 0;
+}
+100%{
+  opacity: 1;
+}
+}
+@keyframes fade-out{
+100%{
+  opacity: 0;
+}
+0%{
+opacity: 1;
+}
+}
+
+@keyframes slide-up{
+0%{
+  transform: translateY(100%);
+}
+100%{
+  transform: translateY(0%);
+}
 } */
+
+@keyframes modalBox{
+0%{
+  transform: scale(0.3);
+}
+100%{
+  transform: scale(1);
+}
+}
+
+.modal[open] {
+  animation: modalBox 500 ms forwards;
+}
 
 .modal {
   position: relative;
@@ -722,10 +752,10 @@ img {
   z-index: 10;
   background-color: var(--white-color);
   
-  animation-name: modalBox;
+  /* animation-name: modalBox;
   animation-duration: 250ms;
   animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  animation-delay: 0;
+  animation-delay: 0; */
   /* animation: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1); */
 }
 

@@ -918,6 +918,7 @@ opacity: 1;
 .checkbox-link {
   color: var(--selection-color);
   text-decoration: underline;
+  padding-inline: 3px;
 }
 
 .submit-modal-btn {
